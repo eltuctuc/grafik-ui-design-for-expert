@@ -1,1 +1,2 @@
-# grafik-ui-design-for-expert
+# Grafik- und UI-Design für Entwickler
+
