@@ -21,7 +21,7 @@ $backgroundColor: #222;
 $mainColor: #fff;
 $headingColor: #fff;
 
-$mainFontSize: 36px;
+$mainFontSize: 38px;
 $mainFont: 'Lato', Helvetica, sans-serif;
 $headingFont: 'Lato', Helvetica, sans-serif;
 $headingTextShadow: none;
@@ -44,6 +44,55 @@ section.has-light-background {
 }
 
 
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( #222, #555 );
+}
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+.reveal {
+	section {
+
+		// Typo
+		p, li, td, figcaption {
+			font-weight: 300;
+		}
+		b {
+			font-weight: 700;
+			color: $linkColor;
+		}
+
+		ul.unstyled {
+			list-style: none;
+		}
+
+		td {
+			vertical-align: top;
+		}
+
+		.nowrap td {
+			white-space: nowrap;
+		}
+
+		.layout-table td {
+			border: none;
+		}
+
+		img {
+			border: none;
+			/*
+			-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+			*/
+		}
+
+		.tiny {
+			font-size: 80%;
+		}
+	}
+}
